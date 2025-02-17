@@ -1,6 +1,7 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:get/get.dart';
 import 'package:me/pages/auth/controller/password_controller.dart';
+import 'package:me/widgets/header_widget.dart';
 
 import '../../constant.dart';
 import '../../widgets/textfiled.dart';
@@ -20,44 +21,64 @@ class SetPasswordPage extends StatelessWidget {
       //
       //! HEADER PART
       body: Stack(alignment: Alignment.bottomCenter, children: [
-        Container(
-          padding: const EdgeInsets.only(
-            right: 10,
-            left: 10,
-            top: 16,
-          ),
-          height: Get.height,
-          width: Get.width,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.centerRight,
-                end: Alignment.centerLeft,
-                colors: [
-                  Colors.amber,
-                  Colors.orangeAccent,
-                ]),
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              InkWell(
-                  onTap: () {
-                    Get.back();
-                  },
-                  child: const Icon(Icons.arrow_back, color: Colors.black54)),
-              const SizedBox(
-                width: 90.0,
-              ),
-               Text(
+        HeaderWidget(
+          height: Get.height - 30,
+          children: [
+            InkWell(
+              onTap: (){
+                Get.back();
+              },
+              child: Icon(Icons.arrow_back, color: Colors.black54,size: 27,),
+            ),
+            Spacer(),
+            Text(
                 'تنظیم گذرواژه'.tr,
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 17),
-              ),
-            ],
-          ),
+                    fontSize: 18),),
+                    Spacer()
+          ]
         ),
+
+        // Container(
+        //   padding: const EdgeInsets.only(
+        //     right: 10,
+        //     left: 10,
+        //     top: 16,
+        //   ),
+        //   height: Get.height,
+        //   width: Get.width,
+        //   decoration: const BoxDecoration(
+        //     gradient: LinearGradient(
+        //         begin: Alignment.centerRight,
+        //         end: Alignment.centerLeft,
+        //         colors: [
+        //           Colors.amber,
+        //           Colors.orangeAccent,
+        //         ]),
+        //   ),
+        //   child: Row(
+        //     crossAxisAlignment: CrossAxisAlignment.start,
+        //     children: [
+        //       InkWell(
+        //           onTap: () {
+        //             Get.back();
+        //           },
+        //           child: const Icon(Icons.arrow_back, color: Colors.black54)),
+        //       const SizedBox(
+        //         width: 90.0,
+        //       ),
+        //        Text(
+        //         'تنظیم گذرواژه'.tr,
+        //         style: const TextStyle(
+        //             fontWeight: FontWeight.bold,
+        //             color: Colors.white,
+        //             fontSize: 17),
+        //       ),
+        //     ],
+        //   ),
+        // ),
         //! second container
         SingleChildScrollView(
           child: Container(

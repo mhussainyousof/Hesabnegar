@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:me/widgets/header_widget.dart';
 
 import '../../constant.dart';
 import 'books_screen.dart';
@@ -12,46 +13,68 @@ class BookList extends StatelessWidget {
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
-        Container(
-          padding: const EdgeInsets.only(
-            right: 10,
-            left: 10,
-            top: 16,
-          ),
-          height: Get.height,
-          width: Get.width,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.centerRight,
-                end: Alignment.centerLeft,
-                colors: [
-                  Color.fromARGB(255, 255, 205, 4),
-                  Colors.orangeAccent,
-                ]),
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              InkWell(
-                  onTap: () {
-                    Get.back();
-                  },
-                  child: const Icon(Icons.arrow_back, color: Colors.black54)),
-              const Spacer(),
-               Text(
+        HeaderWidget(
+          height: Get.height - 30,
+          children: [
+            InkWell(
+              onTap: (){
+                Get.back();
+                
+              },
+              child: Icon(Icons.arrow_back),
+
+            ),
+            Spacer(),
+             Text(
                 'لیست کتاب های مفید'.tr,
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     fontSize: 17),
               ),
-              const SizedBox(
-                width: 25,
-              ),
-              const Spacer()
-            ],
-          ),
+              Spacer()
+          ]
         ),
+        // Container(
+        //   padding: const EdgeInsets.only(
+        //     right: 10,
+        //     left: 10,
+        //     top: 16,
+        //   ),
+        //   height: Get.height,
+        //   width: Get.width,
+        //   decoration: const BoxDecoration(
+        //     gradient: LinearGradient(
+        //         begin: Alignment.centerRight,
+        //         end: Alignment.centerLeft,
+        //         colors: [
+        //           Color.fromARGB(255, 255, 205, 4),
+        //           Colors.orangeAccent,
+        //         ]),
+        //   ),
+        //   child: Row(
+        //     crossAxisAlignment: CrossAxisAlignment.start,
+        //     children: [
+        //       InkWell(
+        //           onTap: () {
+        //             Get.back();
+        //           },
+        //           child: const Icon(Icons.arrow_back, color: Colors.black54)),
+        //       const Spacer(),
+        //        Text(
+        //         'لیست کتاب های مفید'.tr,
+        //         style: const TextStyle(
+        //             fontWeight: FontWeight.bold,
+        //             color: Colors.white,
+        //             fontSize: 17),
+        //       ),
+        //       const SizedBox(
+        //         width: 25,
+        //       ),
+        //       const Spacer()
+        //     ],
+        //   ),
+        // ),
         SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.only(top: 15, right: 12, left: 17),

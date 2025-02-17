@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+  import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:me/bindings/bindings.dart';
 import 'package:me/pages/translate/controller/taranslate.dart';

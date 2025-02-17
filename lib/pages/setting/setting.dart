@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:get/get.dart';
 import 'package:me/controllers/cupertino_controller.dart';
 import 'package:me/pages/auth/controller/password_controller.dart';
 import 'package:me/pages/translate/controller/taranslate.dart';
 import 'package:me/pages/auth/delet_pass.dart';
 import 'package:me/pages/auth/set_password.dart';
+import 'package:me/widgets/header_widget.dart';
 // import 'package:neumorphic_ui/neumorphic_ui.dart';
 
 class Setting extends StatelessWidget {
@@ -20,44 +20,67 @@ class Setting extends StatelessWidget {
       child: Scaffold(
         body: Stack(alignment: Alignment.bottomCenter, children: [
           //! HEADER PART
-          Container(
-            padding:  const EdgeInsets.only(right: 10, left: 10, top: 15),
-            height: Get.height,
-            width: Get.width,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.centerRight,
-                end: Alignment.centerLeft,
-                  colors: [
-                    Colors.amber,
-                    Colors.orangeAccent,
-                  ]),
+          HeaderWidget(
+            height: Get.height - 30,
+            children: 
+          [
+            InkWell(
+              onTap: (){
+                Get.back();
+              },
+              child: const Icon(Icons.arrow_back,
+              size: 25,
+              color: Colors.black54,
+              ),
             ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                InkWell(
-                    onTap: () {
-                      Get.back();
-                    },
-                    child: const Icon(
-                      Icons.arrow_back,
-                    )),
-                 const SizedBox(
-                  width: 65
-                ),
-                 const SizedBox(width: 70,),
-                 Text(
-                  'تنظیـمـات'.tr,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 17.0),
-                ),
-              ],
+            const Spacer(),
+            Text( 'تنظیـمـات'.tr,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 20.0),
             ),
-            //! THE SECOND CONTAINER
+            const Spacer(),
+          ]
           ),
+          // Container(
+          //   padding:  const EdgeInsets.only(right: 10, left: 10, top: 15),
+          //   height: Get.height,
+          //   width: Get.width,
+          //   decoration: const BoxDecoration(
+          //     gradient: LinearGradient(
+          //         begin: Alignment.centerRight,
+          //       end: Alignment.centerLeft,
+          //         colors: [
+          //           Colors.amber,
+          //           Colors.orangeAccent,
+          //         ]),
+          //   ),
+          //   child: Row(
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     children: [
+          //       InkWell(
+          //           onTap: () {
+          //             Get.back();
+          //           },
+          //           child: const Icon(
+          //             Icons.arrow_back,
+          //           )),
+          //        const SizedBox(
+          //         width: 65
+          //       ),
+          //        const SizedBox(width: 70,),
+          //        Text(
+          //         'تنظیـمـات'.tr,
+          //         style: const TextStyle(
+          //             fontWeight: FontWeight.bold,
+          //             color: Colors.white,
+          //             fontSize: 17.0),
+          //       ),
+          //     ],
+          //   ),
+          //   //! THE SECOND CONTAINER
+          // ),
           SingleChildScrollView(
             child: Container(
               width: Get.width,
