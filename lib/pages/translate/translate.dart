@@ -81,29 +81,6 @@ class Translate extends Translations{
       'سلام دوست من': 'Hi boddy',
      'لطفاً هر دو تکست‌فیلد را پر کنید' : 'Please fill both of them',
      'آیا از حذف این آیتم مطمئن هستید :( ؟' : 'Want to delet it?'
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     },
     'fa' :
     {

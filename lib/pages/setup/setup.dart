@@ -48,6 +48,5 @@ Future<void> setup() async {
     },
   );
   
-  // Put controllers in GetX dependency injection
   Get.put(PasswordController());
 }
