@@ -28,7 +28,7 @@ dependencies:
   intl: ^0.19.0
   flutter_localization: ^0.2.0
   popup_menu: ^2.0.0
-  flutter_neumorphic: any
+  # flutter_neumorphic: any
   flutter_neumorphic: 
     git:
       url: https://github.com/den0206/Flutter-Neumorphic.git
