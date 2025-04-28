@@ -36,12 +36,12 @@ class TransactionScreen extends StatelessWidget {
               onTap: (){
                 Get.back();
               },
-              child: Icon(Icons.arrow_back,
+              child: const Icon(Icons.arrow_back,
               size: 25,
               color: Colors.black54,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Text(
                       Get.find<ListController>().isEditing
                           ? 'ویرایش تراکنش'.tr
@@ -51,7 +51,7 @@ class TransactionScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.white
                       )),
-            Spacer(),
+            const Spacer(),
           ]
           ),
         // Container(

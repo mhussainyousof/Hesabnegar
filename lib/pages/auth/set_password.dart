@@ -28,16 +28,16 @@ class SetPasswordPage extends StatelessWidget {
               onTap: (){
                 Get.back();
               },
-              child: Icon(Icons.arrow_back, color: Colors.black54,size: 27,),
+              child: const Icon(Icons.arrow_back, color: Colors.black54,size: 27,),
             ),
-            Spacer(),
+            const Spacer(),
             Text(
                 'تنظیم گذرواژه'.tr,
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     fontSize: 18),),
-                    Spacer()
+                    const Spacer()
           ]
         ),
 
