@@ -43,6 +43,7 @@ class HomeScreen extends StatelessWidget {
       },
       child: SafeArea(
         child: Scaffold(
+           extendBodyBehindAppBar: true,
           resizeToAvoidBottomInset: false,
           drawer: DrawerWidget(),
           bottomNavigationBar: const MyNavigationbarWidget(),

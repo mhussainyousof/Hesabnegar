@@ -1,4 +1,5 @@
   import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:me/bindings/bindings.dart';
 import 'package:me/pages/translate/controller/taranslate.dart';
@@ -10,6 +11,11 @@ import 'package:me/routes/routes.dart';
 
 void main(List<String> args) async {
  
+ SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Color(0xfffeaf2a), 
+    statusBarIconBrightness: Brightness.light, 
+  ));
+
 await setup();
   runApp(const MyApp());
 }
