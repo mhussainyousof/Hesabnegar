@@ -1,0 +1,2 @@
+C:/Users/hussain_yousof/Desktop/workone/Hesabnegar/android/app/.cxx/Debug/291j4l1s/x86/CMakeFiles/edit_cache.dir
+C:/Users/hussain_yousof/Desktop/workone/Hesabnegar/android/app/.cxx/Debug/291j4l1s/x86/CMakeFiles/rebuild_cache.dir

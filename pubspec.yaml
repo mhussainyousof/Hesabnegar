@@ -21,12 +21,12 @@ dependencies:
   flutter_svg: ^2.0.10+1
   hive: ^2.2.3
   hive_flutter: ^1.1.0 
-  persian_datetime_picker: ^2.6.0
+  persian_datetime_picker: ^3.1.0
   fl_chart: ^0.68.0
   shamsi_date:
   blurrycontainer: ^2.1.0
-  intl: ^0.19.0
-  flutter_localization: ^0.2.0
+  # intl: ^0.20.2
+  flutter_localization: ^0.3.2
   popup_menu: ^2.0.0
   # flutter_neumorphic: any
   flutter_neumorphic: 
@@ -36,9 +36,11 @@ dependencies:
   
   # neumorphic_ui: ^1.0.1
   cron:
-  awesome_notifications:
+  awesome_notifications: ^0.10.1
   url_launcher: ^6.3.0
 
+dependency_overrides:
+  intl: ^0.20.2 
 
 dev_dependencies:
   flutter_test:

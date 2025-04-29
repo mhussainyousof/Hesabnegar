@@ -1,6 +1,5 @@
-// lib/setup.dart
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
+// import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:cron/cron.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -17,36 +16,36 @@ Future<void> setup() async {
   await Hive.openBox('settings');
   
   // Initialize Awesome Notifications
-  AwesomeNotifications().initialize(null, [
-    NotificationChannel(
-      channelKey: 'key1',
-      channelName: 'Proto Coders Point',
-      channelDescription: 'Notification example',
-      playSound: true,
-      enableLights: true,
-      enableVibration: true,
-      defaultColor: const Color(0xff9050dd),
-      ledColor: Colors.white,
-    )
-  ]);
+  // AwesomeNotifications().initialize(null, [
+  //   NotificationChannel(
+  //     channelKey: 'key1',
+  //     channelName: 'Proto Coders Point',
+  //     channelDescription: 'Notification example',
+  //     playSound: true,
+  //     enableLights: true,
+  //     enableVibration: true,
+  //     defaultColor: const Color(0xff9050dd),
+  //     ledColor: Colors.white,
+  //   )
+  // ]);
   
   // Set up Cron jobs
   final cron = Cron();
-  cron.schedule(
-    Schedule.parse('0 10 * * *'),
-    () async {
-      if (Get.find<CupertinoController>().ison.value) {
-        await AwesomeNotifications().createNotification(
-          content: NotificationContent(
-            id: 1,
-            channelKey: 'key1',
-            title: 'سلام دوست من'.tr,
-            body: 'آیا امروز دخل و خرج خودت را نوشتی؟'.tr,
-          ),
-        );
-      }
-    },
-  );
+  // cron.schedule(
+  //   Schedule.parse('0 10 * * *'),
+  //   () async {
+  //     if (Get.find<CupertinoController>().ison.value) {
+  //       await AwesomeNotifications().createNotification(
+  //         content: NotificationContent(
+  //           id: 1,
+  //           channelKey: 'key1',
+  //           title: 'سلام دوست من'.tr,
+  //           body: 'آیا امروز دخل و خرج خودت را نوشتی؟'.tr,
+  //         ),
+  //       );
+  //     }
+  //   },
+  // );
   
   Get.put(PasswordController());
 }
