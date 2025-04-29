@@ -40,7 +40,6 @@ class PasswordController extends GetxController {
     final tempConfirmPassword = confirmPasswordController.value.text;
 
     if (tempPassword.isEmpty || tempConfirmPassword.isEmpty) {
-      // نمایش پیام خطا در صورت خالی بودن یکی از تکست‌فیلدها
       Get.snackbar(
         'خطا'.tr,
         'لطفاً هر دو تکست‌فیلد را پر کنید'.tr,
@@ -53,9 +52,8 @@ class PasswordController extends GetxController {
       );
         passwordBox.delete('password');
         isPasswordIncorrect.value = true;
-        // Get.find<PasswordController>().isPasswordIncorrect;
         
-      return; // خروج از تابع بدون ذخیره‌سازی رمز عبور
+      return;
     } else if (tempPassword == tempConfirmPassword) {
       passwordBox.put('password', tempPassword);
       Get.snackbar('تبریک'.tr, 'پسورد با موفقیت تنظیم شد'.tr,
@@ -66,17 +64,6 @@ class PasswordController extends GetxController {
           ));
       isPasswordIncorrect.value = false;
     } 
-    // else {
-    //   Get.snackbar('خطا'.tr, 'پسورد مطابقت ندارد'.tr,
-    //       animationDuration: const Duration(seconds: 1),
-    //       duration: const Duration(seconds: 2),
-    //       icon: const Icon(
-    //         Icons.error,
-    //         color: Colors.red,
-    //       ));
-
-    //   isPasswordIncorrect.value = true;
-    // }
   }
 
   //! check if the password is correct used in login page..

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:get/get.dart';
-// import 'package:neumorphic_ui/neumorphic_ui.dart';
 import 'package:me/controllers/hive_controller.dart';
 import 'package:me/controllers/manage_errors/snackbar.dart';
 import 'package:me/pages/translate/controller/taranslate.dart';
@@ -23,9 +22,6 @@ class TransactionScreen extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       resizeToAvoidBottomInset: false,
-
-      //
-      //
       //! HEADER PART
       body: Stack(alignment: Alignment.bottomCenter, children: [
           HeaderWidget(
@@ -54,46 +50,7 @@ class TransactionScreen extends StatelessWidget {
             const Spacer(),
           ]
           ),
-        // Container(
-        //   padding: const EdgeInsets.only(
-        //     right: 10,
-        //     left: 10,
-        //     top: 16,
-        //   ),
-        //   height: Get.height,
-        //   width: Get.width,
-        //   decoration: const BoxDecoration(
-        //     gradient: LinearGradient(
-        //         begin: Alignment.centerRight,
-        //         end: Alignment.centerLeft,
-        //         colors: [
-        //           Colors.amber,
-        //           Color(0xFFFFAB40),
-        //         ]),
-        //   ),
-        //   child: Row(
-        //     crossAxisAlignment: CrossAxisAlignment.start,
-        //     children: [
-        //       InkWell(
-        //           onTap: () {
-        //             Get.back();
-        //           },
-        //           child: const Icon(Icons.arrow_back, color: Colors.black54)),
-        //       const SizedBox(
-        //         width: 90.0,
-        //       ),
-        //        Text(
-        //               Get.find<ListController>().isEditing
-        //                   ? 'ویرایش تراکنش'.tr
-        //                   : 'تراکنش جدید'.tr,
-        //               style: const TextStyle(
-        //                 fontSize: 17,
-        //                 fontWeight: FontWeight.bold,
-        //                 color: Colors.white
-        //               )),
-        //     ],
-        //   ),
-        // ),
+       
         //! second container
         SingleChildScrollView(
           child: Container(

@@ -20,7 +20,6 @@ import '../add_edit_transaction/transaction_screen.dart';
 import 'widget/empty_widget.dart';
 import 'widget/list_tile.dart';
 
-// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
@@ -192,13 +191,13 @@ class HomeScreen extends StatelessWidget {
         textbuttonRight: 'خیر'.tr,
         textbuttonLeft: 'بلی'.tr,
         onpressedRight: () {
-          Get.back(); // بسته شدن دیالوگ بدون خروج از برنامه
+          Get.back(); 
         },
         onpressedLeft: () async {
-          await SystemNavigator.pop(); // خروج از برنامه
+          await SystemNavigator.pop();
         },
-        child: Container(), // محتوای دلخواه خود را می‌توانید اینجا قرار دهید
+        child: Container(),
       ),
     ) ??
-        false; // اگر هیچ پاسخی داده نشود، مقدار false برگردانده می‌شود.
+        false; 
   }

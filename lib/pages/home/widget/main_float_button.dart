@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../constant.dart';
-
 // ignore: must_be_immutable
 class MainFloatingWidget extends StatelessWidget {
   final Function() onPressed;

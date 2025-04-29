@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:get/get.dart';
-// import 'package:neumorphic_ui/neumorphic_ui.dart';
 import 'package:me/utils/calculate.dart';
 import 'package:me/widgets/header_widget.dart';
 import 'widgets/chart_widget.dart';
@@ -30,14 +29,14 @@ class InfoScreen extends StatelessWidget {
               onTap: (){
                 Get.back();
               },
-              child: Icon(Icons.arrow_back, color: Colors.black54,size: 27,),
+              child: const Icon(Icons.arrow_back, color: Colors.black54,size: 27,),
             ),
           const Spacer(),
-          Padding(padding: EdgeInsets.only(top: 5.0),
+          Padding(padding: const EdgeInsets.only(top: 5.0),
           child: Text( 'مدیریت تراکنش ها'.tr,
           textAlign: TextAlign.center,
           
-          style: TextStyle(fontWeight: FontWeight.bold,
+          style: const TextStyle(fontWeight: FontWeight.bold,
           fontSize: 19.0,
           color: Colors.white
           ),
@@ -45,19 +44,18 @@ class InfoScreen extends StatelessWidget {
 
           ),
           ),
-        Spacer(),
+        const Spacer(),
         ]),
 
             //! second container
             SingleChildScrollView(
               child: Container(
                 padding: const EdgeInsets.only(top: 7, right: 7, left: 3,),
-                // margin: const EdgeInsets.only(bottom: 10),
                 width: Get.width,
                 height: Get.height * 0.9 - 65,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
-                    borderRadius: const BorderRadius.only(
+                    borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(20))),
                 child:  SingleChildScrollView(

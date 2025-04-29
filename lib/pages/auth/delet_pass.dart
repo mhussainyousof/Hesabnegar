@@ -43,45 +43,6 @@ class DeletPage extends StatelessWidget {
               ],
             ),
             
-          // Container(
-          //   padding: const EdgeInsets.only(
-          //     right: 10,
-          //     left: 10,
-          //     top: 16,
-          //   ),
-          //   height: Get.height,
-          //   width: Get.width,
-          //   decoration: const BoxDecoration(
-          //     gradient: LinearGradient(
-          //         begin: Alignment.centerRight,
-          //       end: Alignment.centerLeft,
-          //         colors: [
-          //           Colors.amber,
-          //           Colors.orangeAccent,
-          //         ]),
-          //   ),
-          //   child: Row(
-          //     crossAxisAlignment: CrossAxisAlignment.start,
-          //     children: [
-          //       InkWell(
-          //           onTap: () {
-          //             Get.back();
-          //           },
-          //           child: const Icon(Icons.arrow_back, color: Colors.black54)),
-          //       const SizedBox(
-          //         width: 70.0,
-          //       ),
-          //        Text(
-          //         'حذف گذرواژه'.tr,
-          //         style: const TextStyle(
-          //             fontWeight: FontWeight.bold,
-          //             color: Colors.white,
-          //             fontSize: 17),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-
           //! ABOVE TEXT OF THE TEXTFILED
           SingleChildScrollView(
             child: Container(
