@@ -31,7 +31,7 @@ class DeletPage extends StatelessWidget {
                     Get.back();
                     },
                     child: const Icon(Icons.arrow_back, color: Colors.black54, size: 27,)),
-                Spacer(),
+                const Spacer(),
                  Text(
                   'حذف گذرواژه'.tr,
                   style: const TextStyle(
@@ -39,7 +39,7 @@ class DeletPage extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 18),
                 ),
-                Spacer(),
+                const Spacer(),
               ],
             ),
             

@@ -33,10 +33,13 @@ class HomeScreen extends StatelessWidget {
     final bool isEnglish =
         Get.find<TranslateController>().currentLanguage == 'en';
 
-    return WillPopScope(
-      onWillPop: () async {
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (bool didPop) async {
+        if (!didPop) {
         bool shouldExit = await showExitDialog();
-        return shouldExit;
+          if (shouldExit) SystemNavigator.pop();
+        }
       },
       child: SafeArea(
         child: Scaffold(

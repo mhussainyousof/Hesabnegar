@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:me/controllers/manage_errors/dialog.dart';
-import 'package:me/pages/books/books_screen.dart';
 import 'package:me/pages/setting/setting.dart';
 import '../pages/describe_app/about_page.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -71,20 +70,7 @@ class DrawerWidget extends StatelessWidget {
             Get.to(() => const AboutScreen());
           },
         ),
-        ListTile(
-          title: Row(
-            children: [
-              const Icon(Icons.attach_money_rounded),
-              const SizedBox(
-                width: 20,
-              ),
-              Text('لیست کتاب ها'.tr),
-            ],
-          ),
-          onTap: () {
-            Get.to(() => const BooksScreen());
-          },
-        ),
+      
         ListTile(
           title: Row(
             children: [

@@ -5,7 +5,6 @@ import 'package:me/pages/home/home_screen.dart';
 import 'package:me/pages/auth/login_screen.dart';
 import 'package:me/pages/auth/set_password.dart';
 import '../pages/describe_app/about_page.dart';
-import '../pages/books/books_screen.dart';
 import '../pages/info_screen/info_screen.dart';
 import '../pages/setting/setting.dart';
 import '../pages/splash/splash_screen.dart';
@@ -21,7 +20,6 @@ class Routes {
         GetPage(name: '/loginscreen', page: ()=> LoginPage()),
         GetPage(name: '/deletscreen', page: ()=> DeletPage()),
         GetPage(name: '/aboutscreen', page: ()=> const AboutScreen()),
-        GetPage(name: '/booksscreen', page: ()=> const BooksScreen()),
         GetPage(name: '/SplashScreen', page: ()=> const SplashScreen()),
       ];
 }
