@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:get/get.dart';
-
 import 'package:me/constant.dart';
 import 'package:me/controllers/hive_controller.dart';
 import 'package:me/controllers/manage_errors/dialog.dart';
