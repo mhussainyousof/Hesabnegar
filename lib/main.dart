@@ -1,4 +1,4 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:me/bindings/bindings.dart';
@@ -17,7 +17,10 @@ void main(List<String> args) async {
   ));
 
 await setup();
-  runApp(const MyApp());
+
+  runApp(
+
+      const MyApp());
 }
 
 class MyApp extends StatelessWidget {
